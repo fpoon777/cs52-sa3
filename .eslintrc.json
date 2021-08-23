@@ -34,7 +34,7 @@
           0,
           "DebuggerStatement"
         ],
-        "no-debugger": "warn",
+        "no-debugger": "warn"
         // "eslint linebreak-style": ["error", "windows"],
         // "linebreak-style": [2, "windows"]
     },

@@ -1,11 +1,13 @@
+/* eslint-disable linebreak-style */
 import debounce from 'lodash.debounce';
-import SearchBar from './components/search_bar';
-import VideoDetail from './components/video_detail';
-import youtubeSearch from './youtube-api';
-import VideoList from './components/video_list';
+import React, { Component } from 'react';
+import SearchBar from './search_bar';
+import VideoDetail from './video_detail';
+import youtubeSearch from '../youtube-api';
+import VideoList from './video_list';
 
 // google api key:AIzaSyCmh2SeHbt2vpqIrFVIIyzImcmEYCX_3so
-class App extends Component {
+class Youtube extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,3 +39,5 @@ class App extends Component {
       );
     }
 }
+
+export default Youtube;

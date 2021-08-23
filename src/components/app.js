@@ -3,8 +3,9 @@ import React from 'react';
 import {
   BrowserRouter as Router, Route, NavLink, Switch,
 } from 'react-router-dom';
-import Counter from './counter';
-import Controls from './controls';
+// import Counter from './counter';
+// import Controls from './controls';
+import YouTube from './youtube';
 
 const About = (props) => {
   return <div> All there is to know about me </div>;
@@ -13,8 +14,7 @@ const About = (props) => {
 const Welcome = (props) => {
   return (
     <div>
-      <Counter />
-      <Controls />
+      Welcome
     </div>
   );
 };
@@ -31,6 +31,7 @@ const Nav = (props) => {
   return (
     <nav>
       <ul>
+        <li><NavLink to="/youtube" exact>YouTube</NavLink></li>
         <li><NavLink to="/" exact>Home</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/test/id1">test id1</NavLink></li>
@@ -49,6 +50,7 @@ const App = (props) => {
           <Route exact path="/" component={Welcome} />
           <Route path="/about" component={About} />
           <Route exact path="/test/:id" component={Test} />
+          <Route exact path="/youtube" component={YouTube} />
           <Route component={FallBack} />
         </Switch>
       </div>
