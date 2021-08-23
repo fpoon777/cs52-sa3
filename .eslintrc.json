@@ -36,7 +36,7 @@
         ],
         "no-debugger": "warn",
         // "eslint linebreak-style": ["error", "windows"],
-        "linebreak-style": [2, "windows"]
+        // "linebreak-style": [2, "windows"]
     },
     "plugins": [
         "react"
