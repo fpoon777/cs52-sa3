@@ -2,10 +2,12 @@
 // this defines what your store state will look like
 import { combineReducers } from 'redux';
 
-import CountReducer from './count-reducer';
+// import CountReducer from './count-reducer';
+import VideoReducer from './video-reducer';
 
 const rootReducer = combineReducers({
-  count: CountReducer,
+  // count: CountReducer,
+  video: VideoReducer,
 });
 
 export default rootReducer;

@@ -1,9 +1,11 @@
 import React from 'react';
+// eslint-disable-next-line no-unused-vars
+import { connect } from 'react-redux';
 import VideoListItem from './video_list_item';
 
 const VideoList = (props) => {
   const videoItems = props.videos.map((video) => {
-    return <VideoListItem onVideoSelect={props.onVideoSelect} key={video.etag} video={video} />;
+    return <VideoListItem key={video.etag} video={video} />;
   });
 
   return (
@@ -13,4 +15,10 @@ const VideoList = (props) => {
   );
 };
 
-export default VideoList;
+// export default VideoList;
+
+const mapStateToProps = (reduxState) => ({
+  videos: reduxState.video.list,
+});
+
+export default connect(mapStateToProps, null)(VideoList);
